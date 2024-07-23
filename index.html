@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Tutorials of ACL 2024: Watermarking for Large Language Model">
+  <meta name="keywords" content="LLM, Watermark, ACL">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tutorials of ACL 2024: Watermarking for Large Language Model</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" type="image/svg+xml" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://xuandongzhao.github.io/">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+        
+        <!-- Additional Navbar Items with Text -->
+        <a class="navbar-item" href="#related">
+          Schedule
+        </a>
+        <a class="navbar-item" href="#BibTeX">
+          BibTeX
+        </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Tutorials of ACL 2024 <p></p> Watermarking for Large Language Model</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://xuandongzhao.github.io/">Xuandong Zhao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://cseweb.ucsd.edu/~yuxiangw/">Yu-Xiang Wang</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.cmu.edu/~leili/">Lei Li</a><sup>3</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>UC Berkeley,</span>
+            <span class="author-block"><sup>2</sup>UC San Diego,</span>
+            <span class="author-block"><sup>3</sup>CMU</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Generative AI has significantly advanced, particularly in natural language processing, exemplified by models like ChatGPT, but these advancements have raised concerns about misuse, such as generating fake news or plagiarizing content. This tutorial explores text watermarking as a solution, embedding detectable patterns within AI-generated text to verify its origin, unlike statistical pattern recognition methods which are prone to biases and attacks. We will cover the evolution of text watermarking, its modern techniques, and challenges, along with model watermarking for copyright protection. Participants will gain a solid understanding of watermarking methods, their practical applications, and future research directions in this critical field.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section" id="related">
+  <div class="columns is-centered has-text-centered">
+  <h2 class="title is-3">Schedule</h2>
+  </div>
+  <div class="container is-max-desktop">
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        
+        <h3 class="title is-4">PART I: Introduction (5 min)</h3>
+        <div class="content has-text-justified">
+          <p>Using existing slides for motivation and high-level introduction.</p>
+          <p><strong>Presenter:</strong> Xuandong Zhao</p>
+          <p>This section provides the background for the tutorial, presenting the challenges posed by machine-written text and the potential ethical issues arising from Large Language Models (LLMs). We will introduce two primary approaches to addressing these issues: post-hoc detection and watermarking methods.</p>
+          <ul>
+            <li>Potential harms caused by LLM generation</li>
+            <li>Background and challenges of detecting machine-written text</li>
+            <li>Two possible approaches:
+              <ul>
+                <li>Post-hoc detectors as binary classifiers</li>
+                <li>Watermarking methods</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  
+        <h3 class="title is-4">PART II A: Watermarking Generated Text (85 min)</h3>
+        <div class="content has-text-justified">
+          <p><strong>Presenter:</strong> Xuandong Zhao, Yu-Xiang Wang</p>
+          <p>We delve into the process and evolution of watermarking for natural languages. We further explore watermarking methods specifically designed for Large Language Models.</p>
+          <ul>
+            <li>Early stages of watermarking:
+              <ul>
+                <li>Synonym substitution</li>
+                <li>Syntactic structure restructuring</li>
+              </ul>
+            </li>
+            <li>Neural language model-based watermarking:
+              <ul>
+                <li>Context-aware lexical substitution</li>
+                <li>Mask-infilling models for text editing</li>
+              </ul>
+            </li>
+            <li>For traditional methods (total 5 mins)</li>
+            <li>Watermarking for Large Language Models:
+              <ul>
+                <li>Soft Watermark by Kirchenbauer et al. (2023) (20 mins)</li>
+                <li>Unigram Watermark by Zhao et al. (2023a) (5-10 mins) Completed</li>
+                <li>Gumbel Watermark by Aaronson (2023) (20 mins)</li>
+                <li>Theoretical results in the unified framework (15 mins) Completed</li>
+                <li>Undetectable Watermark by Christ et al. (2023) (5 mins)</li>
+                <li>Distortion-free Watermark by Kuditipudi et al. (2023) (5 mins)</li>
+                <li>1-2 mins for other methods (DiPmark, Best scores, …)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  
+        <h2 class="title is-3">— Break (30 mins) —</h2>
+  
+        <h3 class="title is-4">PART II B: Watermark Evaluation (10 mins)</h3>
+        <div class="content has-text-justified">
+          <p>We can also talk about the evaluation of LLM watermarks (10 mins)</p>
+        </div>
+  
+        <h3 class="title is-4">PART III: Model Watermarking (40 min)</h3>
+        <div class="content has-text-justified">
+          <p><strong>Presenter:</strong> Lei Li</p>
+          <p>This part explores other related watermarking methods for AI models. We will discuss various methods used to safeguard intellectual property using watermarks.</p>
+          <ul>
+            <li>Copyright protection against model extraction attack:
+              <ul>
+                <li>CATER by He et al. (2022b) (5 mins) Completed</li>
+                <li>DRW by Zhao et al. (2022) (10 mins) Completed</li>
+                <li>Ginsew by Zhao et al. (2023b) (10 mins) Completed</li>
+                <li><a href="https://arxiv.org/pdf/2402.14904v1">This paper from Meta</a> is also working on distillation.</li>
+              </ul>
+            </li>
+            <li>Model detection against finetuning or pruning:
+              <ul>
+                <li><a href="https://arxiv.org/pdf/2112.05588">Copy, Right?</a> by Chen et al. (2022) (5 mins) Not Started</li>
+                <li><a href="https://arxiv.org/pdf/2401.12255">IF</a> by Xu et al. (2024) (5-10 mins) Not Started</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  
+        <h3 class="title is-4">PART IV: Post-Hoc Detection (10 min)</h3>
+        <div class="content has-text-justified">
+          <p><strong>Presenter:</strong> Xuandong Zhao</p>
+          <p>This part focuses on post-hoc detection methods, detailing the use of binary classifiers and statistical outlier detection techniques. We will discuss the theoretical and empirical limitations.</p>
+          <ul>
+            <li>Binary Classifiers:
+              <ul>
+                <li>Limitations of OpenAI detector (OpenAI, 2023b)</li>
+                <li>Traditional methods: linear/logistic regression or SVMs</li>
+                <li>Deep learning approaches</li>
+              </ul>
+            </li>
+            <li>Statistical Outlier Detection:
+              <ul>
+                <li>Techniques based on entropy, perplexity, n-gram frequencies</li>
+                <li>DetectGPT by Mitchell et al. (2023)</li>
+                <li>Theoretical limits of detectability (Sadasivan et al., 2023)</li>
+                <li>Fast-DetectGPT / RADAR</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  
+        <h3 class="title is-4">PART V: Conclusion and Future Directions (10 min)</h3>
+        <div class="content has-text-justified">
+          <p>In the final section, we will provide a summary of the tutorial, discuss the best practices for implementing text watermarking, and explore potential future developments in the field of text watermarking.</p>
+          <ul>
+            <li>Summary (5 mins)</li>
+            <li>Existing Demo / Benchmarks (5 mins)</li>
+            <li>Open Problems (5 mins)</li>
+          </ul>
+        </div>
+  
+        <h3 class="title is-4">PART VI: Q&A (20 mins)</h3>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{zhao2024tutorials,
+  author    = {Zhao, Xuandong and Wang, Yu-Xiang and Li, Lei},
+  title     = {Watermarking for Large Language Model},
+  journal   = {Tutorials of ACL},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
