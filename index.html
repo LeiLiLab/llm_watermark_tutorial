@@ -81,7 +81,7 @@
             <span class="author-block">
               <a href="https://cseweb.ucsd.edu/~yuxiangw/">Yu-Xiang Wang</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://www.cs.cmu.edu/~leili/">Lei Li</a><sup>3</sup>,
+              <a href="https://www.cs.cmu.edu/~leili/">Lei Li</a><sup>3</sup>
             </span>
           </div>
 
@@ -106,7 +106,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Generative AI has significantly advanced, particularly in natural language processing, exemplified by models like ChatGPT, but these advancements have raised concerns about misuse, such as generating fake news or plagiarizing content. This tutorial explores text watermarking as a solution, embedding detectable patterns within AI-generated text to verify its origin, unlike statistical pattern recognition methods which are prone to biases and attacks. We will cover the evolution of text watermarking, its modern techniques, and challenges, along with model watermarking for copyright protection. Participants will gain a solid understanding of watermarking methods, their practical applications, and future research directions in this critical field.
+            Generative AI has significantly advanced, particularly in natural language processing, exemplified by models like ChatGPT, but these advancements have raised concerns about misuse, such as generating fake news or plagiarizing content. This tutorial explores text watermarking as a solution, embedding detectable patterns within AI-generated text to verify its origin. We will cover the evolution of text watermarking, its modern techniques, and challenges, along with model watermarking for copyright protection. Participants will gain a solid understanding of watermarking methods, their practical applications, and future research directions in this critical field.
           </p>
         </div>
       </div>
@@ -125,118 +125,117 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         
-        <h3 class="title is-4">PART I: Introduction (5 min)</h3>
+        <h3 class="title is-4">Part I: Introduction</h3>
         <div class="content has-text-justified">
           <p>Using existing slides for motivation and high-level introduction.</p>
           <p><strong>Presenter:</strong> Xuandong Zhao</p>
           <p>This section provides the background for the tutorial, presenting the challenges posed by machine-written text and the potential ethical issues arising from Large Language Models (LLMs). We will introduce two primary approaches to addressing these issues: post-hoc detection and watermarking methods.</p>
-          <ul>
-            <li>Potential harms caused by LLM generation</li>
-            <li>Background and challenges of detecting machine-written text</li>
-            <li>Two possible approaches:
-              <ul>
-                <li>Post-hoc detectors as binary classifiers</li>
-                <li>Watermarking methods</li>
-              </ul>
-            </li>
-          </ul>
         </div>
   
-        <h3 class="title is-4">PART II A: Watermarking Generated Text (85 min)</h3>
+        <h3 class="title is-4">Part II: Text Watermarking</h3>
         <div class="content has-text-justified">
           <p><strong>Presenter:</strong> Xuandong Zhao, Yu-Xiang Wang</p>
-          <p>We delve into the process and evolution of watermarking for natural languages. We further explore watermarking methods specifically designed for Large Language Models.</p>
+          <p>We delve into the process and evolution of watermarking for natural languages. We further explore watermarking methods specifically designed for Large Language Models. We will also cover the theoretical analysis of each watermarking method.</p>
           <ul>
-            <li>Early stages of watermarking:
-              <ul>
-                <li>Synonym substitution</li>
-                <li>Syntactic structure restructuring</li>
-              </ul>
-            </li>
-            <li>Neural language model-based watermarking:
-              <ul>
-                <li>Context-aware lexical substitution</li>
-                <li>Mask-infilling models for text editing</li>
-              </ul>
-            </li>
-            <li>For traditional methods (total 5 mins)</li>
+            <li>Early stages of text watermarking
             <li>Watermarking for Large Language Models:
               <ul>
-                <li>Soft Watermark by Kirchenbauer et al. (2023) (20 mins)</li>
-                <li>Unigram Watermark by Zhao et al. (2023a) (5-10 mins) Completed</li>
-                <li>Gumbel Watermark by Aaronson (2023) (20 mins)</li>
-                <li>Theoretical results in the unified framework (15 mins) Completed</li>
-                <li>Undetectable Watermark by Christ et al. (2023) (5 mins)</li>
-                <li>Distortion-free Watermark by Kuditipudi et al. (2023) (5 mins)</li>
-                <li>1-2 mins for other methods (DiPmark, Best scores, …)</li>
+                  <li>
+                      KGW (Green-Red) Watermark: Kirchenbauer et al. (2023) 
+                      <a href="https://arxiv.org/abs/2301.10226" target="_blank">
+                          A Watermark for Large Language Models
+                      </a>
+                  </li>
+                  <li>
+                      Unigram (Green-Red) Watermark: Zhao et al. (2023) 
+                      <a href="https://arxiv.org/abs/2306.17439" target="_blank">
+                          Provable Robust Watermarking for AI-Generated Text
+                      </a>
+                  </li>
+                  <li>
+                      Gumbel Watermark: Aaronson (2023) 
+                      <a href="https://www.youtube.com/watch?v=2Kx9jbSMZqA" target="_blank">
+                          Watermarking of Large Language Models
+                      </a>
+                  </li>
+                  <li>
+                      Undetectable Watermark: Christ et al. (2023) 
+                      <a href="https://arxiv.org/abs/2306.09194" target="_blank">
+                          Undetectable Watermarks for Language Models
+                      </a>
+                  </li>
+                  <li>
+                      Distortion-free Watermark: Kuditipudi et al. (2023) 
+                      <a href="https://arxiv.org/abs/2307.15593" target="_blank">
+                          Robust Distortion-free Watermarks for Language Models
+                      </a>
+                  </li>
+                  <li>Other methods...</li>
               </ul>
             </li>
           </ul>
         </div>
   
-        <h2 class="title is-3">— Break (30 mins) —</h2>
+        <h2 class="title is-3" style="text-align: center;">&mdash;&mdash;&mdash; Break (30 mins) &mdash;&mdash;&mdash;</h2>
   
-        <h3 class="title is-4">PART II B: Watermark Evaluation (10 mins)</h3>
-        <div class="content has-text-justified">
-          <p>We can also talk about the evaluation of LLM watermarks (10 mins)</p>
-        </div>
-  
-        <h3 class="title is-4">PART III: Model Watermarking (40 min)</h3>
+        <h3 class="title is-4">Part III: Model Watermarking</h3>
         <div class="content has-text-justified">
           <p><strong>Presenter:</strong> Lei Li</p>
           <p>This part explores other related watermarking methods for AI models. We will discuss various methods used to safeguard intellectual property using watermarks.</p>
           <ul>
             <li>Copyright protection against model extraction attack:
-              <ul>
-                <li>CATER by He et al. (2022b) (5 mins) Completed</li>
-                <li>DRW by Zhao et al. (2022) (10 mins) Completed</li>
-                <li>Ginsew by Zhao et al. (2023b) (10 mins) Completed</li>
-                <li><a href="https://arxiv.org/pdf/2402.14904v1">This paper from Meta</a> is also working on distillation.</li>
-              </ul>
+                <ul>
+                    <li>CATER: He et al. (2022) 
+                        <a href="https://arxiv.org/abs/2209.08773" target="_blank">
+                            CATER: Intellectual Property Protection on Text Generation APIs via Conditional Watermarks
+                        </a>
+                    </li>
+                    <li>DRW: Zhao et al. (2022) 
+                        <a href="https://arxiv.org/abs/2210.03312" target="_blank">
+                            Distillation-Resistant Watermarking for Model Protection in NLP
+                        </a>
+                    </li>
+                    <li>Ginsew: Zhao et al. (2023) 
+                        <a href="https://arxiv.org/abs/2302.03162" target="_blank">
+                            Protecting Language Generation Models via Invisible Watermarking
+                        </a>
+                    </li>
+                    <li>Radioactivity: Sander et al. (2024) 
+                        <a href="https://arxiv.org/pdf/2402.14904v1" target="_blank">
+                            Watermarking Makes Language Models Radioactive
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li>Model detection against finetuning or pruning:
-              <ul>
-                <li><a href="https://arxiv.org/pdf/2112.05588">Copy, Right?</a> by Chen et al. (2022) (5 mins) Not Started</li>
-                <li><a href="https://arxiv.org/pdf/2401.12255">IF</a> by Xu et al. (2024) (5-10 mins) Not Started</li>
-              </ul>
+                <ul>
+                    <li>DeepJudge: Chen et al. (2021)
+                        <a href="https://arxiv.org/abs/2112.05588" target="_blank">
+                            Copy, Right? A Testing Framework for Copyright Protection of Deep Learning Models
+                        </a>
+                    </li>
+                    <li>Instructional Fingerprinting: Xu et al. (2024) 
+                        <a href="https://arxiv.org/pdf/2401.12255" target="_blank">
+                            Instructional Fingerprinting of Large Language Models
+                        </a>
+                    </li>
+                </ul>
             </li>
-          </ul>
+        </ul>        
         </div>
   
-        <h3 class="title is-4">PART IV: Post-Hoc Detection (10 min)</h3>
+        <h3 class="title is-4">Part IV: Post-Hoc Detection</h3>
         <div class="content has-text-justified">
-          <p><strong>Presenter:</strong> Xuandong Zhao</p>
+          <p><strong>Presenter:</strong> Lei Li</p>
           <p>This part focuses on post-hoc detection methods, detailing the use of binary classifiers and statistical outlier detection techniques. We will discuss the theoretical and empirical limitations.</p>
-          <ul>
-            <li>Binary Classifiers:
-              <ul>
-                <li>Limitations of OpenAI detector (OpenAI, 2023b)</li>
-                <li>Traditional methods: linear/logistic regression or SVMs</li>
-                <li>Deep learning approaches</li>
-              </ul>
-            </li>
-            <li>Statistical Outlier Detection:
-              <ul>
-                <li>Techniques based on entropy, perplexity, n-gram frequencies</li>
-                <li>DetectGPT by Mitchell et al. (2023)</li>
-                <li>Theoretical limits of detectability (Sadasivan et al., 2023)</li>
-                <li>Fast-DetectGPT / RADAR</li>
-              </ul>
-            </li>
-          </ul>
         </div>
   
-        <h3 class="title is-4">PART V: Conclusion and Future Directions (10 min)</h3>
+        <h3 class="title is-4">Part V: Conclusion and Future Directions</h3>
         <div class="content has-text-justified">
           <p>In the final section, we will provide a summary of the tutorial, discuss the best practices for implementing text watermarking, and explore potential future developments in the field of text watermarking.</p>
-          <ul>
-            <li>Summary (5 mins)</li>
-            <li>Existing Demo / Benchmarks (5 mins)</li>
-            <li>Open Problems (5 mins)</li>
-          </ul>
         </div>
   
-        <h3 class="title is-4">PART VI: Q&A (20 mins)</h3>
+        <h3 class="title is-4">Part VI: Q&A</h3>
       </div>
     </div>
     <!--/ Concurrent Work. -->
