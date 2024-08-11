@@ -91,25 +91,50 @@
             </h1>
           </div>
         
-          <div class="is-size-5 publication-authors" style="display: flex; justify-content: center; align-items: center;">
-            <span class="author-block" style="display: flex; align-items: center; margin-bottom: 10px;">
-                <img src="./static/images/xuandong.jpg" alt="Xuandong Zhao" style="width:100px; height:100px; border-radius:50%; object-fit:cover; margin-left:25px; margin-right:5px;">
-                <div>
-                    <a href="https://xuandongzhao.github.io/">Xuandong Zhao</a>
-                    <p style="margin: 0;">UC Berkeley</p>
+          <div class="is-size-5 publication-authors" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <span class="author-block" style="display: flex; align-items: center; margin-bottom: 10px; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; margin-bottom: 10px; margin-left: 10px; margin-right: 10px;">
+                    <img src="./static/images/xuandong.jpg" alt="Xuandong Zhao" style="width:100px; height:100px; border-radius:50%; object-fit:cover; margin-right:10px;">
+                    <div>
+                        <a href="https://xuandongzhao.github.io/">Xuandong Zhao</a>
+                        <p style="margin: 0;">UC Berkeley</p>
+                    </div>
                 </div>
-                <img src="./static/images/yuxiang.jpg" alt="Yu-Xiang Wang" style="width:100px; height:100px; border-radius:50%; object-fit:cover;  margin-left:25px; margin-right:5px;">
-                <div>
-                    <a href="https://cseweb.ucsd.edu/~yuxiangw/">Yu-Xiang Wang</a>
-                    <p style="margin: 0;">UC San Diego</p>
+                <div style="display: flex; align-items: center; margin-bottom: 10px; margin-left: 10px; margin-right: 10px;">
+                    <img src="./static/images/yuxiang.jpg" alt="Yu-Xiang Wang" style="width:100px; height:100px; border-radius:50%; object-fit:cover; margin-right:10px;">
+                    <div>
+                        <a href="https://cseweb.ucsd.edu/~yuxiangw/">Yu-Xiang Wang</a>
+                        <p style="margin: 0;">UC San Diego</p>
+                    </div>
                 </div>
-                <img src="./static/images/leili.png" alt="Lei Li" style="width:100px; height:100px; border-radius:50%; object-fit:cover;  margin-left:25px; margin-right:5px;">
-                <div>
-                    <a href="https://www.cs.cmu.edu/~leili/">Lei Li</a>
-                    <p style="margin: 0;">CMU</p>
+                <div style="display: flex; align-items: center; margin-left: 10px; margin-right: 10px;">
+                    <img src="./static/images/leili.png" alt="Lei Li" style="width:100px; height:100px; border-radius:50%; object-fit:cover; margin-right:10px;">
+                    <div>
+                        <a href="https://www.cs.cmu.edu/~leili/">Lei Li</a>
+                        <p style="margin: 0;">CMU</p>
+                    </div>
                 </div>
             </span>
         </div>
+        
+        <style>
+            @media screen and (max-width: 768px) {
+                .author-block {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+        
+                .author-block img {
+                    margin-bottom: 10px;
+                }
+        
+                .publication-authors {
+                    flex-direction: column;
+                }
+            }
+        </style>
+        
 
           <div class="is-size-5">
             📅 August 11, 14:00 - 17:30 📍 Lotus Suite 5-7. We will take Q&A at <a href="https://app.sli.do/event/xjqaDYxzVuEotynDwSdZFz" class="link blue hover-orange" target="_blank">the Slido link</a>.
